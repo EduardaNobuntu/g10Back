@@ -1,0 +1,18 @@
+npm install express
+npm install typescript ts-node @types/node @types/express --save-dev
+npm install -D @types/express
+
+npm install --save jsonwebtoken @types/jsonwebtoken
+npm install --save axios
+npm install jwk-to-pem --save
+npm install cors --save
+npm install --save @types/cors
+npm install dotenv --save
+npm install moment-timezone
+npm install mongoose --save
+npm install --save sequelize
+npm install --save pg pg-hstor
+npm install --save express-validator
+npm i ts-node nodemon -D
+npm i jwt-decode --save
+npm i --save-dev @types/apicache
