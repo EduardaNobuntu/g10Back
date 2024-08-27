@@ -31,7 +31,7 @@ module.exports = { enviandoEmail };
                 port: 587,
                 secure: false,
                 auth: {
-                    user: emailRemetente,
+                    user: emailRemetente,  
                     pass: senhaRemetente,
                 }
             };

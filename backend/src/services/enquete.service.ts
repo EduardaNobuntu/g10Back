@@ -3,7 +3,6 @@ import { Enquete } from "../models/enquete.model";
 import { Pergunta } from "../models/pergunta.model";
 import EnqueteRepository from "../repository/enquete.repository";
 import BaseService from "./base.service";
-import { gerarPDF } from "../utils/componentGerarPdfRelatorio";
 import { PdfService } from "./pdf.service";
 import { PerguntaService } from "./pergunta.service";
 import { DemograficaService } from "./demografica.service";
@@ -111,7 +110,7 @@ export class EnqueteService extends BaseService<Enquete> {
       arrayPerguntas.sort((a, b) => a.codigoPergunta! - b.codigoPergunta!);
 
       // Gerar o PDF e obter o fileName e pdfIds
-      const { pdfPath, pdfId } = await gerarPDF(arrayPerguntas, enquete.nome ?? '', id ?? '', 'relatorioCategorias');
+      const { pdfPath, pdfId } = await this.pdfService.gerarPdf(arrayPerguntas, enquete.nome!, id, 'relatorioCategorias');
 
       console.log(`PDF gerado com sucesso: ${pdfPath}`);
 
